@@ -3,4 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(132, 118, 118);
+    height: 35rem;
+    width: 20rem;
+    flex-direction: column;
+    gap: 5px;
+}
+.display{
+    background-color: aliceblue;
+    width: 140px;
+}
+.op-buttons{
+    flex-wrap: wrap;
+    width: 140px;
+}
+.op-buttons button {
+    padding: 10px;
+}
