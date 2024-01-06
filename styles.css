@@ -21,11 +21,11 @@ body{
 }
 .display{
     background-color: aliceblue;
-    width: 140px;
+    width: 150px;
 }
 .op-buttons{
     flex-wrap: wrap;
-    width: 140px;
+    width: 150px;
 }
 .op-buttons button {
     padding: 10px;

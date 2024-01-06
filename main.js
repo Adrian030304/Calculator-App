@@ -1,3 +1,14 @@
+let display = document.querySelector(".display");
+ 
+display.innerHTML = parseInt(0)
+
+let numBtns = document.querySelector(".numBtn").children
+console.log(numBtns)
+let btnArr = [...numBtns]
+btnArr.forEach(element => {
+    console.log(element.innerHTML)
+});
+console.log(btnArr.innerHTML)
 //functions for basic math operators
 const add = (a, b) => a + b;
 const substract = (a, b) => a - b;
