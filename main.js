@@ -1,15 +1,18 @@
 let display = document.querySelector(".display");
- 
+
 display.innerHTML = parseInt(0)
 
-let numBtns = document.querySelector(".numBtn").children
-console.log(numBtns)
+let operands = document.getElementsByClassName("operand");
+console.log(operands)
 
-let btnArr = [...numBtns]
+for(let i = 0; i < operands.length; i++){
+     operands[i].addEventListener("click", function() { 
+          const clickedNumber = parseInt(operands[i].textContent);
+          console.log(clickedNumber)
+          display.innerHTML += clickedNumber;
+     })
+}
 
-
-
-console.log(btnArr)
 //functions for basic math operators
 const add = (a, b) => a + b;
 const substract = (a, b) => a - b;
