@@ -31,6 +31,29 @@ opArray.forEach((operand) => {
      });
  });
  
+ document.querySelector("#equal").addEventListener("click",function(){
+     let result;
+     switch(selectedOperator){
+          case "+":
+            result = parseInt(firstNumber) + parseInt(secondNumber);
+            break;
+        case "-":
+            result = parseInt(firstNumber) - parseInt(secondNumber);
+            break;
+        case "*":
+            result = parseInt(firstNumber) * parseInt(secondNumber);
+            break;
+        case "/":
+            result = parseInt(firstNumber) / parseInt(secondNumber);
+            break;
+        default:
+            result = "Invalid operator";
+     }
+     display.textContent = result;
+     firstNumber = "";
+     secondNumber = "";
+     selectedOperator = "";
+ })
 
 /* 
 //functions for basic math operators
