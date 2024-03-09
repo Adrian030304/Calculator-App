@@ -17,13 +17,14 @@ for(let i = 0; i < operands.length; i++){
      
 }
 */
+
+
 opArray.forEach((operand) => {
-     console.log(operand.textContent)
-     operand.addEventListener("click",function(e){
+     let numberInputted = operand.addEventListener("click",function(e){
           const clickedNumber = parseInt(e.target.textContent)
           display.textContent += clickedNumber;
      })
-     
+     console.log(numberInputted)
 });
 
 
@@ -40,3 +41,5 @@ const operator;
 const num2;
 */
 const operate = (num1,num2) => add(num1,num2);
+
+
