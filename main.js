@@ -16,6 +16,7 @@ let selectedOperator = "";
 opArray.forEach((operand) => {
      operand.addEventListener("click", function(e) {
          if (selectedOperator === "") {
+          
              firstNumber += e.target.textContent;
          } else {
              secondNumber += e.target.textContent;
@@ -31,29 +32,29 @@ opArray.forEach((operand) => {
      });
  });
  
- document.querySelector("#equal").addEventListener("click",function(){
+ document.querySelector("#equal").addEventListener("click", function() {
      let result;
-     switch(selectedOperator){
-          case "+":
-            result = parseInt(firstNumber) + parseInt(secondNumber);
-            break;
-        case "-":
-            result = parseInt(firstNumber) - parseInt(secondNumber);
-            break;
-        case "*":
-            result = parseInt(firstNumber) * parseInt(secondNumber);
-            break;
-        case "/":
-            result = parseInt(firstNumber) / parseInt(secondNumber);
-            break;
-        default:
-            result = "Invalid operator";
+     switch (selectedOperator) {
+         case "+":
+             result = parseInt(firstNumber) + parseInt(secondNumber);
+             break;
+         case "-":
+             result = parseInt(firstNumber) - parseInt(secondNumber);
+             break;
+         case "*":
+             result = parseInt(firstNumber) * parseInt(secondNumber);
+             break;
+         case "/":
+             result = parseInt(firstNumber) / parseInt(secondNumber);
+             break;
+         default:
+             result = "Invalid operator";
      }
-     display.textContent = result;
+     display.textContent = result !== "Invalid operator" ? result : "Error: Check Input";
      firstNumber = "";
      secondNumber = "";
      selectedOperator = "";
- })
+ });
 
 /* 
 //functions for basic math operators
