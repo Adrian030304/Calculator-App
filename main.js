@@ -12,15 +12,24 @@ let firstNumber = "";
 let secondNumber = "";
 let selectedOperator = "";
 
-
 opArray.forEach((operand) => {
      operand.addEventListener("click", function(e) {
-         const clickedNumber = parseInt(e.target.textContent);
-         display.textContent += clickedNumber;
+         if (selectedOperator === "") {
+             firstNumber += e.target.textContent;
+         } else {
+             secondNumber += e.target.textContent;
+         }
+         display.textContent += e.target.textContent;
      });
  });
-
-
+ 
+ operators.forEach((operator) => {
+     operator.addEventListener("click", function(e) {
+         selectedOperator = e.target.textContent;
+         display.textContent += selectedOperator;
+     });
+ });
+ 
 
 /* 
 //functions for basic math operators
