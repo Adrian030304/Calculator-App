@@ -13,7 +13,18 @@ let firstNumber = "";
 let secondNumber = "";
 let selectedOperator = "";
 
-opArray.forEach((operand) => {
+
+ operatorsArray.forEach((operator) => {
+     operator.addEventListener("click", function(e) {
+         selectedOperator = e.target.textContent;
+         display.textContent += selectedOperator;
+
+
+         
+     });
+ });
+
+ opArray.forEach((operand) => {
      operand.addEventListener("click", function(e) {
          if (selectedOperator === "") {
           
@@ -25,12 +36,6 @@ opArray.forEach((operand) => {
      });
  });
  
- operatorsArray.forEach((operator) => {
-     operator.addEventListener("click", function(e) {
-         selectedOperator = e.target.textContent;
-         display.textContent += selectedOperator;
-     });
- });
  
  document.querySelector("#equal").addEventListener("click", function() {
      let result;
