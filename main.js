@@ -23,16 +23,17 @@ let selectedOperator = "";
          
      });
  });
-
+//function to take in the number of each button
  opArray.forEach((operand) => {
      operand.addEventListener("click", function(e) {
+        const pressedNumber = e.target.textContent;
          if (selectedOperator === "") {
           
-             firstNumber += e.target.textContent;
+             firstNumber += pressedNumber;
          } else {
-             secondNumber += e.target.textContent;
+             secondNumber += pressedNumber;
          }
-         display.textContent += e.target.textContent;
+         display.textContent += pressedNumber;
      });
  });
  
