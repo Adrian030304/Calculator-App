@@ -1,4 +1,4 @@
-let display = document.querySelector(".display");
+const display = document.querySelector("#display");
 
 display.textContent = ""
 
