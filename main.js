@@ -61,34 +61,34 @@ class Calculator {
     this.operation = undefined
     this.previousOperand = ''
   }
-  getDisplayedNumber(number) {
+  getDisplayNumber(number) {
     const stringNumber = number.toString()
     const integerDigits = parseFloat(stringNumber.split('.')[0])
     const decimalDigits = stringNumber.split('.')[1]
-    let intergerDisplay
-    if(isNaN(integerDigits)){
-        intergerDisplay = ''
+    let integerDisplay
+    if (isNaN(integerDigits)) {
+      integerDisplay = ''
     } else {
-        intergerDisplay = integerDigits.toLocaleString("en", {
-            maximumFractionDigits: 0})
+      integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
     }
-    if(decimalDigits != null){
-        return `${intergerDisplay}.${decimalDigits}`
+    if (decimalDigits != null) {
+      return `${integerDisplay}.${decimalDigits}`
     } else {
-        return integerDigits
+      return integerDisplay
     }
   }
   updateDisplay() {
-    this.currentOperandTextElement.innerText = 
-    this.getDisplayedNumber(this.currentOperand);
-    if(this.operation!= null){
-        this.previousOperandTextElement.innerText = 
-        `${this.getDisplayedNumber(this.previousOperand)} ${this.operation}`;
+    this.currentOperandTextElement.innerText =
+      this.getDisplayNumber(this.currentOperand)
+    if (this.operation != null) {
+      this.previousOperandTextElement.innerText =
+        `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
     } else {
-        this.previousOperandTextElement.innerText = ''
+      this.previousOperandTextElement.innerText = ''
     }
   }
 }
+
 
 //initialized variables containing buttons
 const numberButtons = document.querySelectorAll("[data-number]");
