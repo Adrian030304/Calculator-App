@@ -16,6 +16,7 @@ class Calculator {
 
     }
     appendNumber(number){ //appends the numbers to the screen
+        //this makes sure that the dot doen't get appened many time but once as intended by exiting the funtion
         if(number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
@@ -51,6 +52,13 @@ const calculator = new Calculator(previousOperandTextElement,currentOperandTextE
 numberButtons.forEach(button=>{
     button.addEventListener('click',()=>{
         calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+operationButtons.forEach(button=>{
+    button.addEventListener('click',()=>{
+        calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
 })
