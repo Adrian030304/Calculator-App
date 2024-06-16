@@ -1,7 +1,43 @@
+//created calculator class 
+class Calculator {
+    constructor(previousOperandTextElement,currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement;
+        this.currentOperandTextElement = currentOperandTextElement;
+    }
+    //add operations of the calculator
+
+    clear(){ //clears the numbers
+
+    }
+    delete(){ //deletes a number 
+
+    }
+    appendNumber(number){ //appends the numbers to the screen
+
+    }
+    chooseOperation(operation){
+
+    }
+
+    compute(){
+
+    }
+
+    updateDisplay(){
+        
+    }
+}
+
+
+
+
+//initialized variables containing buttons
 const numberButtons = document.querySelectorAll('[data-number]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
 const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
-const previousOperandTextElementButton = document.querySelector('[data-previous-operand]')
-const currentOperandTextElementButton = document.querySelector('[data-current-operand]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
+
+
