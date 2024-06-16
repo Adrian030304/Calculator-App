@@ -21,6 +21,12 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
     chooseOperation(operation){
+        //this condition is so the function doen't run a empty string
+        if(this.currentOperand === '') return 
+        //this computes the already inserted values when it's computed with another number as long as it's not empty
+        if(this.previousOperand !== '') {
+            this.compute()
+        }
         this.operation = operation
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
@@ -32,6 +38,7 @@ class Calculator {
 
     updateDisplay(){
         this.currentOperandTextElement.innerText = this.currentOperand
+        this.previousOperandTextElement.innerText = this.previousOperand
     }
 }
 
