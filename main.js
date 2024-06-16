@@ -16,6 +16,7 @@ class Calculator {
 
     }
     appendNumber(number){ //appends the numbers to the screen
+        if(number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
     chooseOperation(operation){
