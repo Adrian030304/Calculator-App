@@ -15,7 +15,7 @@ class Calculator {
   }
   delete() {
     //deletes a number
-    this.currentOperand = this.currentOperand
+    this.currentOperand = this.currentOperand.toString().slice(0,-1)
   }
   appendNumber(number) {
     //appends the numbers to the screen
@@ -110,3 +110,7 @@ allClearButton.addEventListener("click", (button) => {
     calculator.updateDisplay();
   });
   
+deleteButton.addEventListener("click", (button) => {
+    calculator.delete();
+    calculator.updateDisplay();
+  });
