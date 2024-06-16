@@ -15,6 +15,7 @@ class Calculator {
   }
   delete() {
     //deletes a number
+    this.currentOperand = this.currentOperand
   }
   appendNumber(number) {
     //appends the numbers to the screen
